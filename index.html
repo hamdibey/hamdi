@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>hasokey.com.tr — 101 Okey, Okey, Domino, Batak</title>
+    <meta name="description" content="hasokey.com.tr online oyun portalı: 101 Okey, Okey, Domino ve Batak salonları, gerçek zamanlı sohbet ve yönetim sistemi." />
+    <meta name="theme-color" content="#1a120b" />
+    <link rel="icon" type="image/jpeg" href="icon.jpg" />
+    <link rel="apple-touch-icon" href="icon-192.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="hasokey.com.tr" />
+    <link rel="canonical" href="https://hasokey.com.tr/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hasokey.com.tr/" />
+    <meta property="og:site_name" content="hasokey.com.tr" />
+    <meta property="og:title" content="hasokey.com.tr — 101 Okey, Okey, Domino, Batak" />
+    <meta property="og:description" content="Online oyun portalı: 101 Okey, Okey, Domino ve Batak salonları, gerçek zamanlı sohbet ve yönetim sistemi." />
+    <meta property="og:locale" content="tr_TR" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="hasokey.com.tr — 101 Okey, Okey, Domino, Batak" />
+    <meta name="twitter:description" content="Online oyun portalı: 101 Okey, Okey, Domino ve Batak salonları, gerçek zamanlı sohbet." />
+  <meta name="description" content="HasOkey ile ücretsiz online okey oyna! 101 Okey, Okey, Domino ve Batak salonlarında canlı oyuncularla, sesli sohbetli, mobil ve bilgisayar uyumlu okey keyfi. Hemen üye ol, HasOkey masaüstü ve Android uygulamasını indir." />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="keywords" content="hasokey, has okey, okey oyna, online okey, canlı okey, ücretsiz okey, 101 okey, 101 okey oyna, okey sitesi, okey oyunu, internetsiz okey, sesli okey, mobil okey, okey indir, domino oyna, batak oyna, okey masası, hasokey.com.tr" />
+<meta property="og:image" content="https://hasokey.com.tr/icon-192.png" />
+<meta property="og:image:alt" content="HasOkey — Online Okey" />
+<meta property="og:title" content="HasOkey — Ücretsiz Online Okey Oyna | 101 Okey, Canlı Okey" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"HasOkey","alternateName":["Has Okey","hasokey.com.tr"],"url":"https://hasokey.com.tr/","logo":"https://hasokey.com.tr/icon-192.png"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"HasOkey","alternateName":"Has Okey","url":"https://hasokey.com.tr/","inLanguage":"tr-TR","description":"Ücretsiz online okey, 101 okey, domino ve batak oyna."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"HasOkey — Online Okey","url":"https://hasokey.com.tr/","inLanguage":"tr-TR","applicationCategory":"Game","gamePlatform":["Web","Windows","Android"],"operatingSystem":["Web","Windows","Android"],"genre":["Okey","101 Okey","Domino","Batak","Masa Oyunu"],"offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"publisher":{"@type":"Organization","name":"HasOkey"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"HasOkey nedir?","acceptedAnswer":{"@type":"Answer","text":"HasOkey, ücretsiz online okey, 101 okey, domino ve batak oynayabileceğiniz canlı oyun sitesidir. Web, Windows ve Android üzerinden oynanır."}},{"@type":"Question","name":"HasOkey ücretsiz mi?","acceptedAnswer":{"@type":"Answer","text":"Evet, HasOkey tamamen ücretsizdir. Üye olup hemen okey oynamaya başlayabilirsiniz."}},{"@type":"Question","name":"Okey oynamak için indirmem gerekir mi?","acceptedAnswer":{"@type":"Answer","text":"Hayır, tarayıcıdan oynayabilirsiniz. Dilerseniz daha akıcı deneyim için HasOkey Windows ve Android uygulamasını indirebilirsiniz."}}]}</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  <style>#__rBar{display:none!important}</style>
+<style id="hasokey-mobile">
+@media (max-width:768px){
+/* ===== HASOKEY MOBIL LOGIN v1 (sadece telefon <=768px) ===== */
+/* Giris overlay'ini SADECE login ekraninda hedefle (nick input varsa) */
+.fixed.inset-0.z-40:has(input[placeholder="nick"]){background:#0a3d2e !important;}
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) > div{background:#0a3d2e !important;justify-content:flex-start !important;}
+/* Baslik cubugu: dokunulabilir yukseklik */
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) > div > div:first-child{height:42px !important;align-items:center !important;}
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) > div > div:first-child button{font-size:18px !important;padding:0 12px !important;}
+/* Icerik sarmalayici: dikey, tam genislik */
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[620px\]{display:flex !important;flex-direction:column !important;width:100% !important;max-width:100% !important;padding:14px 14px 26px !important;gap:14px !important;}
+/* Gereksiz satirlar gizlensin: TC(1) katlar(3) link1(5) VISA(6) microsoft(8) radyo(9) */
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[620px\] > *:nth-child(1),
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[620px\] > *:nth-child(3),
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[620px\] > *:nth-child(5),
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[620px\] > *:nth-child(6),
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[620px\] > *:nth-child(8),
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[620px\] > *:nth-child(9){display:none !important;}
+/* Logo satiri (2): buyuk, okunur kart */
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[620px\] > *:nth-child(2){height:auto !important;min-height:92px !important;border:none !important;border-radius:12px !important;overflow:hidden !important;box-shadow:0 4px 14px rgba(0,0,0,.35) !important;}
+/* Ana form satiri (4): beyaz kart, form ustte */
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[620px\] > *:nth-child(4){flex-direction:column-reverse !important;gap:14px !important;background:#ffffff !important;border-radius:12px !important;padding:16px !important;box-shadow:0 4px 14px rgba(0,0,0,.25) !important;}
+/* Nick/Sifre satirlari: sar, tam genislik */
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .flex-1.min-w-\[0px\],
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[620px\] .flex-1.min-w-0{font-size:14px !important;}
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[620px\] .flex-1.min-w-0 > div{flex-wrap:wrap !important;gap:6px 8px !important;margin-bottom:10px !important;}
+/* Buyuk inputlar (iOS zoom engeli icin 16px+) */
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) input[placeholder="nick"],
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) input[type="password"]{width:100% !important;flex:1 1 100% !important;height:48px !important;font-size:17px !important;border:2px solid #0a7a4f !important;border-radius:10px !important;box-sizing:border-box !important;}
+/* Nick:/Sifre: etiketleri */
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[620px\] .flex-1.min-w-0 span.w-\[42px\]{width:auto !important;text-align:left !important;font-size:14px !important;}
+/* Form butonlari (Baglan / Uye Ol / anahtar) */
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[620px\] .flex-1.min-w-0 button{height:46px !important;font-size:16px !important;border-radius:10px !important;}
+/* Baglan butonu one cikan tam genislik yesil */
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[620px\] .flex-1.min-w-0 .flex-wrap > button:first-child{flex:1 1 100% !important;background:linear-gradient(#17a561,#0a7a4f) !important;color:#fff !important;font-weight:800 !important;border:1px solid #0a6a45 !important;}
+/* Sol kolon (Canli Destek + Misafir Giris): alt satir */
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[118px\]{width:100% !important;flex-direction:row !important;gap:10px !important;}
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[118px\] > *{flex:1 1 0 !important;height:46px !important;}
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[118px\] .h-\[86px\]{height:0 !important;display:none !important;}
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[118px\] button{height:46px !important;font-size:14px !important;}
+/* Alt yardim linkleri (7): ortala, sar */
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[620px\] > *:nth-child(7){flex-wrap:wrap !important;gap:12px 16px !important;justify-content:center !important;}
+.fixed.inset-0.z-40:has(input[placeholder="nick"]) .w-\[620px\] > *:nth-child(7) button{font-size:13px !important;}
+}
+</style>
+<style id="hasokey-mobile-salon">
+@media (max-width:768px){
+/* ===== HASOKEY MOBIL SALON/LOBI v2 (kart tabanli) ===== */
+/* S = salon overlay (icinde aside.w-[300px] olan; oyun masasi degil) */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]){font-size:15px !important;background:#0a3d2e !important;}
+/* Ust baslik satiri */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) > div:nth-child(1){height:42px !important;align-items:center !important;background:#072f23 !important;color:#fff !important;padding:0 10px !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) > div:nth-child(1) span.truncate{font-size:15px !important;color:#fff !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) > div:nth-child(1) button{font-size:19px !important;padding:2px 12px !important;}
+/* Kat sekmeleri */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) > div:nth-child(2){height:auto !important;min-height:48px !important;flex-wrap:wrap !important;gap:8px !important;padding:8px !important;background:#072f23 !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) > div:nth-child(2) button{font-size:16px !important;padding:9px 16px !important;background:#0a7a4f !important;color:#fff !important;border-radius:8px !important;line-height:1 !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) > div:nth-child(2) button span{font-size:16px !important;color:#fff !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) > div:nth-child(2) span.mx-auto{font-size:17px !important;}
+/* Ana felt alani tam yukseklik + kaydirilabilir */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) > div:nth-child(3){flex:1 1 auto !important;min-height:0 !important;display:flex !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg{height:100% !important;min-height:0 !important;flex:1 1 auto !important;overflow-y:auto !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg > div{min-height:100% !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .max-w-\[1500px\]{max-width:100% !important;width:100% !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg b.truncate{font-size:20px !important;}
+/* Arac cubugu */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .flex.flex-wrap.items-center.gap-1{gap:8px !important;padding:8px !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .flex.flex-wrap.items-center.gap-1 > button{font-size:14px !important;padding:9px 12px !important;min-height:40px !important;border-radius:8px !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .flex.flex-wrap.items-center.gap-1 > button:first-child{background:linear-gradient(#17a561,#0a7a4f) !important;color:#fff !important;font-weight:800 !important;}
+/* Icerik: dikey yigin */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .h-\[560px\]{height:auto !important;flex-direction:column !important;gap:10px !important;margin:8px !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .h-\[560px\] > div.flex-1{width:100% !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) aside.w-\[300px\]{width:100% !important;}
+/* Masa tablo kutusu */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .flex-\[3\]{min-height:300px !important;max-height:62vh !important;overflow:auto !important;background:transparent !important;border:none !important;}
+/* Sohbet kutusu kisitla */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .h-\[560px\] .min-h-\[160px\]{height:180px !important;min-height:120px !important;max-height:180px !important;overflow:auto !important;}
+/* Yan paneller (uye listesi + TOP10) */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) aside.w-\[300px\] > div{max-height:240px !important;overflow:auto !important;}
+/* ===== MASA TABLOSU -> MOBIL KART ===== */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg table{display:block !important;width:100% !important;font-size:15px !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg thead{display:none !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg tbody{display:block !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg tbody tr{display:flex !important;flex-wrap:wrap !important;align-items:center !important;gap:6px !important;background:#fff !important;border:1px solid #c9c9c9 !important;border-radius:12px !important;margin:0 0 10px 0 !important;padding:10px !important;box-shadow:0 1px 3px rgba(0,0,0,.2) !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg tbody td{display:flex !important;align-items:center !important;justify-content:center !important;border:none !important;padding:6px !important;white-space:normal !important;min-width:0 !important;}
+/* Masa No -> sol ustte kirmizi rozet */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg tbody td:nth-child(7){order:0 !important;flex:0 0 auto !important;background:#c00 !important;color:#fff !important;font-weight:800 !important;border-radius:8px !important;padding:4px 10px !important;font-size:15px !important;}
+/* Masa Adi -> baslik */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg tbody td:nth-child(1){order:1 !important;flex:1 1 40% !important;justify-content:flex-start !important;font-weight:800 !important;font-size:16px !important;flex-direction:column !important;align-items:flex-start !important;}
+/* Izle butonu -> sag ust */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg tbody td:nth-child(8){order:2 !important;margin-left:auto !important;flex:0 0 auto !important;}
+/* Ayarlar sutunu gizle */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg tbody td:nth-child(2){display:none !important;}
+/* Oyuncu 1-4 -> 2x2 koltuk */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg tbody td:nth-child(3),
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg tbody td:nth-child(4),
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg tbody td:nth-child(5),
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg tbody td:nth-child(6){order:3 !important;flex:1 1 calc(50% - 6px) !important;min-height:40px !important;background:#eef3ee !important;border:1px solid #d5ddd5 !important;border-radius:8px !important;font-size:14px !important;}
+/* Koltuktaki Oyna butonlari */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg tbody td button{min-height:34px !important;font-size:14px !important;padding:6px 14px !important;border-radius:7px !important;}
+/* Tasma onleme: kutu modeli + yatay kaydirma kapat */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) *{box-sizing:border-box !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg{overflow-x:hidden !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .max-w-\[1500px\]{padding-left:4px !important;padding-right:4px !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg tbody tr{max-width:100% !important;overflow:hidden !important;}
+/* Alt yardim link cubugu */
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .flex.flex-wrap.items-center.gap-x-0\.5{display:flex !important;flex-wrap:wrap !important;gap:10px 14px !important;padding:12px 8px !important;justify-content:center !important;align-items:center !important;width:100% !important;max-width:100% !important;overflow-x:hidden !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .flex.flex-wrap.items-center.gap-x-0\.5 > span{flex:0 0 auto !important;display:inline-flex !important;align-items:center !important;}
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .flex.flex-wrap.items-center.gap-x-0\.5 button{font-size:13px !important;}
+}
+
+</style>
+<style id="hasokey-mobile-salon-tabs">
+/* HASOKEY MOBIL SALON SAG SEKME CUBUGU v1 - sadece telefon, PC degismez */
+@media (max-width:768px){
+.fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg{padding-right:54px !important;}
+html[data-hksal="masa"] .fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg .min-h-\[160px\]{display:none !important;}
+html[data-hksal="masa"] .fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg aside.w-\[300px\]{display:none !important;}
+html[data-hksal="masa"] .fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg .flex-\[3\]{flex:1 1 auto !important;max-height:none !important;}
+html[data-hksal="salon"] .fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg .flex-\[3\]{display:none !important;}
+html[data-hksal="salon"] .fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg .min-h-\[160px\]{display:none !important;}
+html[data-hksal="salon"] .fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg aside.w-\[300px\]{flex:1 1 auto !important;}
+html[data-hksal="salon"] .fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg aside.w-\[300px\] > div{max-height:72vh !important;}
+html[data-hksal="sohbet"] .fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg .flex-\[3\]{display:none !important;}
+html[data-hksal="sohbet"] .fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg aside.w-\[300px\]{display:none !important;}
+html[data-hksal="sohbet"] .fixed.inset-0.flex.flex-col.text-\[11px\]:has(aside.w-\[300px\]) .felt-bg .min-h-\[160px\]{height:auto !important;min-height:64vh !important;max-height:none !important;flex:1 1 auto !important;}
+#hk-saltabbar{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:2147483600;display:none;flex-direction:column;gap:10px;padding:0;margin:0;}
+#hk-saltabbar button.hk-saltab{display:flex;flex-direction:column;align-items:center;justify-content:center;width:50px;height:62px;border:0;border-radius:14px 0 0 14px;background:#0a7a4f;color:#fff;box-shadow:-2px 2px 8px rgba(0,0,0,.4);gap:3px;cursor:pointer;-webkit-tap-highlight-color:transparent;font-family:inherit;}
+#hk-saltabbar button.hk-saltab > span{font-size:21px;line-height:1;}
+#hk-saltabbar button.hk-saltab > em{font-style:normal;font-size:11px;font-weight:800;line-height:1;}
+#hk-saltabbar button.hk-saltab.on{background:#ffcc00;color:#06281e;}
+}
+</style>
+<style id="hasokey-mobile-landing">
+@media (max-width:768px){
+/* ===== HASOKEY MOBIL GIRIS/LANDING v1 (sadece telefon) - PC degismez ===== */
+#root > div.min-h-screen{min-height:0 !important;height:auto !important;}
+#root > div.min-h-screen > .mx-auto.max-w-\[1080px\]{padding:4px !important;max-width:100% !important;}
+.mx-auto.max-w-\[1080px\] > .hk-out.p-\[3px\]{padding:0 !important;}
+.hk-in.bg-white{display:flex !important;flex-direction:column !important;}
+/* Gereksiz bloklar: marquee(2), ozellik serit(4), buyuk tanitim(5), vk-checker(6) GIZLE */
+.hk-in.bg-white > div:nth-child(2),
+.hk-in.bg-white > div:nth-child(4),
+.hk-in.bg-white > div:nth-child(5),
+.hk-in.bg-white > div:nth-child(6){display:none !important;}
+/* Baslik cubugu kompakt */
+.hk-in.bg-white > div:nth-child(1){padding:8px 10px !important;}
+/* Hero: kompakt, dikey */
+.hk-in.bg-white > div:nth-child(3){padding:12px !important;gap:10px !important;flex-direction:column !important;}
+.hk-in.bg-white > div:nth-child(3) h1{font-size:21px !important;line-height:1.15 !important;}
+.hk-in.bg-white > div:nth-child(3) h1 br{display:none !important;}
+.hk-in.bg-white > div:nth-child(3) > div.flex-1 > p{font-size:12px !important;margin-top:4px !important;}
+/* Aksiyon butonlari: tam genislik, buyuk dokunulabilir */
+.hk-in.bg-white > div:nth-child(3) .mt-3.flex.flex-wrap.gap-2{flex-direction:column !important;gap:9px !important;margin-top:10px !important;}
+.hk-in.bg-white > div:nth-child(3) .mt-3.flex.flex-wrap.gap-2 > button{width:100% !important;height:48px !important;font-size:16px !important;border-radius:10px !important;}
+/* Kurulum notu kucult */
+.hk-in.bg-white > div:nth-child(3) .flex-1 > p.text-\[11px\]{font-size:10px !important;margin-top:6px !important;}
+/* Video kutusu kucult */
+.hk-in.bg-white > div:nth-child(3) .w-full.lg\:w-\[420px\]{width:100% !important;}
+.hk-in.bg-white > div:nth-child(3) .w-full.lg\:w-\[420px\] video{height:100px !important;}
+/* Footer kompakt + ortala */
+.hk-in.bg-white > div:nth-child(7){padding:8px 10px !important;gap:6px 12px !important;justify-content:center !important;}
+.hk-in.bg-white > div:nth-child(7) button,.hk-in.bg-white > div:nth-child(7) a{font-size:11px !important;}
+}
+
+</style>
+<style id="hasokey-arial-black">html{font-size:108%}*,*::before,*::after{font-family:"Segoe UI",Roboto,"Helvetica Neue",Verdana,Tahoma,Arial,sans-serif !important}</style>
+<style id="hk-lobi-masa">
+      /* Lobi masa listesi: referans krem zemin (lobi.png) */
+      div[class*="flex-[3]"][class*="overflow-auto"]{background:#fdf8ec !important;}
+      table.border-collapse{background:#fdf8ec !important;}
+      table.border-collapse thead th{background:#efe7d2 !important;}
+      table.border-collapse tbody tr:hover{background:#f2e8d4 !important;}
+    </style>
+<style id="hk-masa-mavi">
+      /* Oyun masasi zemini: klasik mavi (yesilden override) */
+      .felt-bg{background:radial-gradient(ellipse at 50% 30%,rgba(70,130,225,.40),transparent 66%),repeating-linear-gradient(45deg,rgba(255,255,255,.014) 0 2px,transparent 2px 4px),linear-gradient(180deg,#1b4aa0,#0a2256 60%,#061636) !important;}
+    </style>
+<style id="hkmob-fix">
+      /* Mobil: masaustu pencere ici kaydirma (Salon Kiralama vb.) */
+      @media (max-width: 640px){
+        #root > .fixed.inset-0 > div[class*="sm:max-w-"]{
+          height: 100vh !important;
+          height: 100dvh !important;
+          max-height: 100vh !important;
+          max-height: 100dvh !important;
+        }
+        #root > .fixed.inset-0 > div[class*="sm:max-w-"] > div.bg-\[\#d4d0c8\]{
+          height: 100% !important;
+          min-height: 0 !important;
+        }
+        #root > .fixed.inset-0 .flex-1.min-h-0.overflow-auto.relative{
+          overflow-y: auto !important;
+          overflow-x: hidden !important;
+          -webkit-overflow-scrolling: touch !important;
+        }
+        /* Salon Kiralama: mobilde cok kolonlu salon izgarasi */
+        .grid.grid-cols-3{
+          grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        }
+        /* Salon Kiralama: admin listesi mobilde gizli (temiz akis) */
+        .hk-legacy-admin{ display: none !important; }
+        /* KiraPage kok: mobilde tam ekran, tasma yok */
+        .felt-bg.min-h-screen{ min-height: 100dvh !important; }
+        /* Salon secim izgarasi: mobilde 2 kolon, buyuk dokunma hedefi */
+        @media (max-width: 640px){
+          .grid.grid-cols-3{ grid-template-columns: repeat(2, minmax(0,1fr)) !important; gap: 8px !important; }
+          .grid.grid-cols-3 > button{ min-height: 64px !important; font-size: 13px !important; padding: 10px !important; }
+        }
+      }
+    </style>
+<style id="hkmob-masa">
+/* ============================================================
+   HASOKEY - MASA EKRANI MOBIL DUZEN v1  (id: hkmob-masa)
+   Sadece telefon (<=900px). Masaustu/Electron DEGISMEZ.
+   ============================================================ */
+@media (max-width: 900px){
+  /* Yatay kaydirma kesinlikle olmasin */
+  html, body { overflow-x: hidden !important; }
+
+  /* Yukseklik zinciri: masa tam ekrani dogru doldursun */
+  .felt-bg{ padding:4px !important; }
+  .felt-bg.min-h-screen{ min-height:100dvh !important; }
+
+  /* Masa + paneller satiri: ALT ALTA diz (yan yana sigmiyor) */
+  .cq-row{
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    gap:6px !important;
+    min-height:0 !important;
+    overflow-y:auto !important;
+    -webkit-overflow-scrolling:touch !important;
+  }
+
+  /* MASA: en genis kalir, okunur yukseklik */
+  .cq-row > .klasik-masa{
+    width:100% !important;
+    flex:0 0 auto !important;
+    min-height:58vh !important;
+    border-width:2px !important;
+  }
+
+  /* Masanin ic yerlesimi: yan seritleri kisalt, taslara yer ac */
+  .cq-row .klasik-masa .relative.z-\[5\]{
+    padding:8px 6px !important;
+    min-height:0 !important;
+  }
+
+  /* Yan paneller (chat / oyuncular / top10): masa altinda tam genislik */
+  .cq-row > .cq-side-80{ width:100% !important; order:2; }
+  .cq-row > .cq-side-72{ width:100% !important; order:2; }
+
+  /* Yazilar mobilde makul kalsin (zoom ile kucultulmus gibi olmasin) */
+  .cq-row .klasik-masa{ font-size:12px; }
+
+  /* Dokunma hedefleri */
+  .cq-row button{ min-height:32px; }
+}
+
+/* Cok dar telefon (<=400px) */
+@media (max-width: 400px){
+  .cq-row > .klasik-masa{ min-height:52vh !important; }
+  .felt-bg{ padding:2px !important; }
+}
+
+/* Telefon YATAY (kisa yukseklik): masa yaninda paneller yine kirilsin */
+@media (max-height: 520px) and (orientation: landscape){
+  .cq-row{ flex-direction: column !important; }
+  .cq-row > .klasik-masa{ min-height:70vh !important; }
+}
+
+</style>
+<style id="hk-mob-rail-css">
+/* ================= HASOKEY MASA YATAY MOBIL (id: hk-mob-rail-css) =================
+   Sadece [data-hkmob] aktifken (dokunmatik + yatay) gecerli. Masaustu/dikey ETKILENMEZ. */
+html[data-hkmob="1"], html[data-hkmob="1"] body{overflow:hidden!important;height:100%!important;}
+
+html[data-hkmob="1"] #hk-top{
+  position:fixed;left:0;right:0;top:0;height:34px;z-index:9998;
+  display:flex;align-items:center;gap:10px;padding:0 10px;
+  background:linear-gradient(180deg,#155a2f,#0c3b1e);color:#fff;
+  font:700 12px/1 Tahoma,Arial,sans-serif;border-bottom:2px solid #d4a53c;
+  white-space:nowrap;overflow:hidden;box-sizing:border-box;
+}
+html[data-hkmob="1"] #hk-top .kat{display:flex;align-items:center;gap:4px;background:#0a2e17;border:1px solid #d4a53c;border-radius:6px;padding:3px 6px;}
+html[data-hkmob="1"] #hk-top .kat select{background:transparent;color:#ffe08a;border:0;font:inherit;outline:none;}
+html[data-hkmob="1"] #hk-top .kat select option{color:#000;}
+html[data-hkmob="1"] #hk-top .who{color:#ffe08a;}
+html[data-hkmob="1"] #hk-top .salon{margin-left:auto;color:#8ff0b0;overflow:hidden;text-overflow:ellipsis;}
+html[data-hkmob="1"] #hk-top .vtag{background:#ffd400;color:#111;font-weight:900;border-radius:4px;padding:2px 6px;margin-left:6px;}
+
+html[data-hkmob="1"] #hk-rail{
+  position:fixed;right:0;top:34px;bottom:0;width:58px;z-index:9999;
+  display:flex;flex-direction:column;gap:6px;padding:6px 4px;box-sizing:border-box;
+  background:linear-gradient(180deg,#0e3d22,#082814);border-left:2px solid #d4a53c;
+}
+html[data-hkmob="1"] #hk-rail button{
+  flex:0 0 auto;width:100%;min-height:44px;border:1px solid #2f6b45;border-radius:8px;
+  background:#12502c;color:#eafaf0;font:700 10px/1.15 Tahoma,Arial,sans-serif;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:4px 2px;cursor:pointer;
+}
+html[data-hkmob="1"] #hk-rail button .ic{font-size:16px;line-height:1;}
+html[data-hkmob="1"] #hk-rail button.on{background:#d4a53c;color:#1a1206;border-color:#ffe08a;}
+html[data-hkmob="1"] #hk-rail .sp{flex:1 1 auto;min-height:0;}
+html[data-hkmob="1"] #hk-rail button.exit{background:#7f1d1d;border-color:#b91c1c;color:#fff;}
+
+/* Masayi sag cubuk ve ust serit arasinda tam alana oturt */
+html[data-hkmob="1"] .game-stage{transform-origin:top left!important;}
+html[data-hkmob="1"] .felt-bg{padding-top:0!important;}
+
+/* Panel: secili sekmeye gore masa ve yan alanlari goster/gizle */
+html[data-hkmob="1"][data-hkmasa="masa"] .cq-row > *:not(.klasik-masa){display:none!important;}
+html[data-hkmob="1"][data-hkmasa="masa"] .cq-row > .klasik-masa{flex:1 1 auto!important;width:100%!important;}
+
+/* users: masa gizle, kullanici+puan listelerini one cikar */
+html[data-hkmob="1"][data-hkmasa="users"] .cq-row > .klasik-masa{display:none!important;}
+
+/* chat: masa gizle, sohbet alanini one cikar */
+html[data-hkmob="1"][data-hkmasa="chat"] .cq-row > .klasik-masa{display:none!important;}
+</style>
+<script>(function(){function u(){var w=document.getElementById('hasokey-dl-wrap');if(!w)return;var land=!!document.querySelector('.hk-out.p-\\[3px\\]');w.style.display=land?'flex':'none';}u();var r=document.getElementById('root');if(r){new MutationObserver(u).observe(r,{childList:true,subtree:true});}setInterval(u,800);})();</script>
+<script id="hk-salon-tabs">(function(){if(window.__hkSalTabs)return;window.__hkSalTabs=1;var SALON='.fixed.inset-0.flex.flex-col.text-\\[11px\\]:has(aside.w-\\[300px\\])';var bar=document.createElement('div');bar.id='hk-saltabbar';var tabs=[['masa','🀄','Masa'],['salon','👥','Salon'],['sohbet','💬','Sohbet']];function setTab(k){document.documentElement.setAttribute('data-hksal',k);var bs=bar.querySelectorAll('.hk-saltab');for(var i=0;i<bs.length;i++){bs[i].classList.toggle('on',bs[i].getAttribute('data-k')===k);}}tabs.forEach(function(t){var b=document.createElement('button');b.type='button';b.className='hk-saltab';b.setAttribute('data-k',t[0]);var s=document.createElement('span');s.textContent=t[1];var e=document.createElement('em');e.textContent=t[2];b.appendChild(s);b.appendChild(e);b.addEventListener('click',function(){setTab(t[0]);});bar.appendChild(b);});document.body.appendChild(bar);function hasSalon(){return !!document.querySelector(SALON);}function tick(){var on=window.matchMedia('(max-width:768px)').matches&&hasSalon();bar.style.display=on?'flex':'none';if(on){if(!document.documentElement.getAttribute('data-hksal'))setTab('masa');}else{document.documentElement.removeAttribute('data-hksal');}}setTab('masa');try{new MutationObserver(tick).observe(document.body,{childList:true,subtree:true});}catch(e){}window.addEventListener('resize',tick);setInterval(tick,1000);tick();})();</script>
+<script id="hk-ver-badge">(function(){try{var b=document.createElement("div");b.textContent="HasOkey v56";b.style.cssText="position:fixed;left:6px;bottom:6px;z-index:2147483647;background:#ffd400;color:#111;font:700 11px Arial;padding:3px 7px;border-radius:5px;box-shadow:0 1px 4px rgba(0,0,0,.4);pointer-events:none;";function add(){if(document.body)document.body.appendChild(b);}if(document.body)add();else document.addEventListener("DOMContentLoaded",add);}catch(e){}})();</script>
+<script id="hk-mob-rail-js">/* ===================================================================
+   HASOKEY - MASA YATAY MOBIL DUZEN (canli enjeksiyon)  id: hk-mob-rail
+   - Sadece dokunmatik (pointer:coarse) + YATAY.
+   - Masaustu/Electron ve dikey: HIC dokunmaz.
+   - React dugumlerini TASIMAZ; sadece class/CSS + dinamik scale.
+   =================================================================== */
+(function(){
+  if (window.__hkMobRail) return; window.__hkMobRail = 1;
+  var D = document, root = D.documentElement;
+
+  function isTouch(){ return window.matchMedia('(pointer: coarse)').matches; }
+  function isLandscape(){ return window.innerWidth > window.innerHeight; }
+
+  /* Masa sayfasini bul: felt-bg icinde cq-row olan ana kapsayici */
+  function findMasa(){
+    var rows = D.querySelectorAll('.cq-row');
+    for (var i=0;i<rows.length;i++){
+      var r = rows[i];
+      if (r.querySelector('.klasik-masa')) return r;
+    }
+    return null;
+  }
+  /* game-stage (scale uygulanan kat) */
+  function findStage(){ return D.querySelector('.game-stage'); }
+
+  /* ---- UI iskeleti (body'e eklenir, React disinda) ---- */
+  var TOP, RAIL, built=false;
+  function build(){
+    if (built) return; built=true;
+
+    TOP = D.createElement('div'); TOP.id='hk-top';
+    TOP.innerHTML =
+      '<span class="kat"><span>Kat</span><select id="hk-kat"><option>1</option><option>2</option><option>3</option></select></span>'+
+      '<span class="who">\uD83D\uDC64 <span id="hk-uname">\u2014</span></span>'+
+      '<span class="salon">\uD83C\uDFE0 <span id="hk-salon">\u2014</span></span>'+
+      '<span class="vtag">YEN\u0130 v54</span>';
+    D.body.appendChild(TOP);
+
+    RAIL = D.createElement('div'); RAIL.id='hk-rail';
+    RAIL.innerHTML =
+      '<button data-k="masa" class="on"><span class="ic">\uD83C\uDFB4</span>Masa</button>'+
+      '<button data-k="users"><span class="ic">\uD83D\uDC65</span>Kullan\u0131c\u0131<br>Top 10</button>'+
+      '<button data-k="chat"><span class="ic">\uD83D\uDCAC</span>Sohbet</button>'+
+      '<span class="sp"></span>'+
+      '<button data-k="exit" class="exit"><span class="ic">\uD83D\uDEAA</span>\u00C7\u0131k\u0131\u015f</button>';
+    D.body.appendChild(RAIL);
+
+    var bs = RAIL.querySelectorAll('button');
+    for (var i=0;i<bs.length;i++){
+      (function(b){
+        b.addEventListener('click', function(){
+          var k=b.getAttribute('data-k');
+          if (k==='exit'){ doExit(); return; }
+          setTab(k);
+        });
+      })(bs[i]);
+    }
+  }
+
+  function setTab(k){
+    root.setAttribute('data-hkmasa', k);
+    if (!RAIL) return;
+    var bs=RAIL.querySelectorAll('button[data-k]');
+    for (var i=0;i<bs.length;i++){
+      var dk=bs[i].getAttribute('data-k');
+      if (dk==='exit') continue;
+      bs[i].classList.toggle('on', dk===k);
+    }
+  }
+
+  /* Gercek 'Masadan cik' butonuna bas */
+  function doExit(){
+    var sels = ['button[title*="Masadan"]','button[title*="cik"]','button[title*="\u00c7\u0131k"]'];
+    for (var s=0;s<sels.length;s++){
+      var b = D.querySelector(sels[s]);
+      if (b){ b.click(); return; }
+    }
+    var topx = D.querySelector('button.hover\\:text-red-500');
+    if (topx) topx.click();
+  }
+
+  /* Ust bar bilgisini doldur: nick + salon/masa adi */
+  function fillTop(){
+    if (!TOP) return;
+    var title = D.querySelector('.bg-black.text-white .truncate, .bg-black .truncate');
+    var uname = '\u2014', salon='\u2014';
+    if (title){
+      var t = title.textContent || '';
+      var m = t.match(/\]\s*\[\s*([^\]\[]+?)\s*\]/);
+      if (m) uname = m[1].trim();
+      var first = t.split('[')[0].trim();
+      salon = first || t.trim().slice(0,28);
+    }
+    var un=D.getElementById('hk-uname');
+    if (un && un.textContent!==uname) un.textContent=uname;
+    var sl=D.getElementById('hk-salon');
+    if (sl && sl.textContent!==salon) sl.textContent=salon;
+  }
+
+  /* game-stage scale'ini bizim alana (ekran geni\u015fli\u011fi) oturt: yatayda tam geni\u015flik */
+  function fitStage(){
+    var stage = findStage();
+    if (!stage) return;
+    var parent = stage.parentElement;
+    // tasarim geni\u015fli\u011fi (inline width)
+    var designW = parseFloat(stage.style.width) || stage.scrollWidth || 1180;
+    var availW = window.innerWidth;          // rail/top CSS ile hesaba katiliyor; stage tam geni\u015flik
+    var scale = availW / designW;
+    stage.style.transform = 'scale('+scale+')';
+    stage.style.transformOrigin = 'top left';
+    if (parent){
+      var h = Math.ceil((stage.scrollHeight||720) * scale);
+      parent.style.height = h + 'px';
+      parent.style.overflow = 'visible';
+    }
+  }
+
+  var active=false;
+  function apply(){
+    var on = isTouch() && isLandscape() && !!findMasa();
+    if (on){
+      build();
+      root.setAttribute('data-hkmob','1');
+      if (!root.getAttribute('data-hkmasa')) setTab('masa');
+      TOP.style.display=''; RAIL.style.display='';
+      fillTop();
+      fitStage();
+      active=true;
+    } else {
+      root.removeAttribute('data-hkmob');
+      root.removeAttribute('data-hkmasa');
+      if (TOP) TOP.style.display='none';
+      if (RAIL) RAIL.style.display='none';
+      active=false;
+    }
+  }
+
+  // ilk calistir + olaylar
+  function boot(){ apply(); }
+  if (D.readyState==='loading') D.addEventListener('DOMContentLoaded', boot); else boot();
+  window.addEventListener('resize', apply);
+  window.addEventListener('orientationchange', function(){ setTimeout(apply,120); });
+
+  /* React yeni DOM cizdikce (masa acilinca) tekrar degerlendir.
+     ONEMLI: kendi dugumlerimizin (hk-top/hk-rail) ve textContent
+     yazmalarimizin tetikledigi mutasyonlari YOK SAY -> sonsuz dongu olmaz.
+     Ayrica debounce ile isi azalt. */
+  var mo=null, pending=0;
+  function ownNode(n){
+    while(n){ if(n.id==='hk-top'||n.id==='hk-rail') return true; n=n.parentNode; }
+    return false;
+  }
+  function schedule(){
+    if (pending) return;
+    pending = setTimeout(function(){ pending=0; apply(); }, 150);
+  }
+  try {
+    mo = new MutationObserver(function(muts){
+      if (!isTouch()) return;
+      for (var i=0;i<muts.length;i++){
+        if (!ownNode(muts[i].target)) { schedule(); return; }
+      }
+    });
+    mo.observe(D.body,{childList:true,subtree:true});
+  } catch(e){}
+
+  // React scale'ini yeniden ezmek icin hafif periyodik fit (textContent
+  // yazmadan once mevcut degerle ayni ise degistirmeyiz -> observer sakin).
+  setInterval(function(){ if(active){ fitStage(); fillTop(); } }, 600);
+})();
+</script>
+<script id="hk-auto-lobi">
+(function(){
+  if(window.__hkAutoLobi) return; window.__hkAutoLobi=1;
+  // Istenirse tanitim sayfasinda kal: ?site=1
+  try{ if(new URLSearchParams(location.search).get('site')==='1') return; }catch(e){}
+  var done=false, tries=0;
+  function findBtn(){
+    var els=document.querySelectorAll('button, a, [role=\"button\"]');
+    for(var i=0;i<els.length;i++){
+      var t=(els[i].textContent||'').replace(/\s+/g,' ').trim();
+      if(/Taray[\u0131i]c[\u0131i]dan\s*Oyna/i.test(t)) return els[i];
+    }
+    return null;
+  }
+  function tick(){
+    if(done) return; tries++;
+    var b=findBtn();
+    if(b){
+      b.click();
+      setTimeout(function(){ if(findBtn() && tries<40){ tick(); } else { done=true; } },700);
+      return;
+    }
+    if(tries<40) setTimeout(tick,250);
+  }
+  function boot(){ setTimeout(tick,600); }
+  if(document.readyState!=='loading') boot();
+  else document.addEventListener('DOMContentLoaded',boot);
+})();
+</script>
+<noscript><div style="max-width:860px;margin:0 auto;padding:24px;font-family:Arial,Helvetica,sans-serif;color:#222;line-height:1.6"><h1>HasOkey — Ücretsiz Online Okey Oyna</h1><p>HasOkey, 101 Okey, Okey, Domino ve Batak oyunlarını canlı oyuncularla ücretsiz oynayabileceğiniz keyifli okey sitesidir. Web tarayıcısından, Windows bilgisayardan ve Android telefondan oynayın.</p><h2>HasOkey'de neler var?</h2><ul><li>101 Okey ve klasik Okey salonları</li><li>Domino ve Batak masaları</li><li>Gerçek zamanlı sohbet ve sesli görüşme</li><li>Mobil ve masaüstü uyumlu, hızlı ve ücretsiz oyun</li></ul><h2>HasOkey uygulamasını indir</h2><p><a href="https://hasokey.com.tr/HasOkey-Setup.exe">Windows için HasOkey indir</a> — <a href="https://hasokey.com.tr/HasOkey.apk">Android için HasOkey APK indir</a></p><p>Online okey oynamak, ücretsiz 101 okey, canlı okey, sesli okey ve mobil okey için HasOkey.com.tr adresini ziyaret edin.</p></div></noscript>
+</body>
+</html>

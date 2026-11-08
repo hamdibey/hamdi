@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply font-body text-ivory antialiased;
+  background-color: #04170f;
+}
+
+/* ---------- Klasik hissiyat: keçe masa arkaplanı ---------- */
+.felt-bg {
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(26, 122, 82, 0.35), transparent 65%),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.012) 0 2px, transparent 2px 4px),
+    linear-gradient(180deg, #0a3323, #04170f);
+}
+
+.wood-bg {
+  background:
+    repeating-linear-gradient(90deg, rgba(0,0,0,.18) 0 3px, transparent 3px 9px),
+    linear-gradient(180deg, #4a2f22, #241610);
+}
+
+/* ---------- Okey taşı ---------- */
+.tile-face {
+  background: linear-gradient(160deg, #fdfaf1 0%, #f4eddc 55%, #e6dcc2 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.8), inset 0 -2px 3px rgba(0,0,0,.08);
+}
+/* Taş rakamı — 3B kabartma: üstte beyaz ışık, altta koyu gölge → net okunur */
+.num-3d {
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.85),
+    0 -1px 1px rgba(0,0,0,.35),
+    0 2px 3px rgba(0,0,0,.28);
+  paint-order: stroke fill;
+  -webkit-text-stroke: 0.25px rgba(255,255,255,.35);
+}
+.tile-back {
+  background:
+    repeating-linear-gradient(45deg, rgba(255,255,255,.06) 0 3px, transparent 3px 6px),
+    linear-gradient(160deg, #7a4b34, #33211a);
+  box-shadow: 0 2px 4px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.15);
+}
+
+/* ---------- Domino kemiği ---------- */
+.bone-face {
+  background: linear-gradient(160deg, #fdfaf1 0%, #f0e8d4 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.8);
+}
+
+/* ---------- Kaydırma çubuğu ---------- */
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-track { background: rgba(0,0,0,.25); }
+*::-webkit-scrollbar-thumb { background: #5f3d2c; border-radius: 8px; }
+*::-webkit-scrollbar-thumb:hover { background: #7a4b34; }
+
+/* ---------- Seçim ---------- */
+::selection { background: #d4a53c; color: #170d08; }
+/* ---------- Seçim ---------- */
+::selection { background: #d4a53c; color: #170d08; }
+
+/* ---------- Mobil oyun: yatay çevirme ipucu ---------- */
+@keyframes rotatePhone {
+  0%, 20% { transform: rotate(0deg); }
+  60%, 100% { transform: rotate(90deg); }
+}
+.rotate-phone-anim {
+  font-size: 64px;
+  line-height: 1;
+  animation: rotatePhone 1.8s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+/* ---------- Mobil oyun sahnesi (GameShell, sabit 1024px) ----------
+   Masaüstü lg: kırılımları viewport'a baktığı için mobilde tetiklenmez;
+   sahne içindeki cq-* sınıfları masaüstü iki sütun düzenini zorlar. */
+.game-stage .cq-row { flex-direction: row; }
+.game-stage .cq-side-80 { width: 20rem; }
+.game-stage .cq-side-72 { width: 18rem; }
+
+
+/* ── Klasik kayan duyuru bandı (hakkarim.net tarzı kırmızı bant) ── */
+@keyframes vkMarquee { from { transform: translateX(100%); } to { transform: translateX(-100%); } }
+.vk-marquee { display: inline-block; padding-left: 100%; animation: vkMarquee 30s linear infinite; }
+
+/* ── Anasayfa süsleri (klasik portal tarzı) ── */
+/* Parlayan logo yazısı — eski webmaster tarzı altın parıltı */
+@keyframes vkLogoShine {
+  0%, 100% { text-shadow: 0 2px 0 #7a1414, 0 0 10px rgba(244, 197, 66, 0.25); }
+  50% { text-shadow: 0 2px 0 #7a1414, 0 0 22px rgba(244, 197, 66, 0.85), 0 0 40px rgba(244, 197, 66, 0.4); }
+}
+.vk-logo-shine { animation: vkLogoShine 2.8s ease-in-out infinite; }
+
+/* Yıldız yanıp sönmesi (kayan logo yıldızları) */
+@keyframes vkStarPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.82); }
+}
+.vk-star-pulse { animation: vkStarPulse 1.6s ease-in-out infinite; display: inline-block; }
+
+/* Anasayfadaki dekoratif okey taşları — ağır ağır süzülür */
+@keyframes vkTileFloat {
+  0%, 100% { transform: translateY(0) rotate(-8deg); }
+  50% { transform: translateY(-12px) rotate(6deg); }
+}
+.vk-tile-float { animation: vkTileFloat 5.5s ease-in-out infinite; }
+
+/* Canlı göstergesi nabzı */
+@keyframes vkPulseDot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.vk-pulse-dot { animation: vkPulseDot 1.2s ease-in-out infinite; display: inline-block; }
+
+/* Klasik "damalı" şerit (eski oyun portallarının alt süsü) */
+.vk-checker {
+  background: repeating-linear-gradient(90deg, #c22020 0 10px, #ffffff 10px 20px, #0a3a9c 20px 30px, #ffffff 30px 40px);
+}
+
+/* Klasik dama zemini — hero arkaplan dokusu */
+.vk-hero-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+  background-size: 14px 14px;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   HAS OKEY — klasik masaüstü (Win98) tasarım modeli
+   Videodaki birebir replika: gri pencere gövdesi, içe-çıkış
+   ışık-gölge kenarlıklar, mavi başlık gradyanı, beyaz liste zemini
+   ────────────────────────────────────────────────────────────── */
+.hk-body { font-family: Tahoma, Geneva, Verdana, sans-serif; color: #000; }
+
+/* Win98 kenarlık: dışa kabartma / içe çökme */
+.hk-out { box-shadow: inset -1px -1px 0 #0a0a0a, inset 1px 1px 0 #fff, inset -2px -2px 0 #808080, inset 2px 2px 0 #dfdfdf; }
+.hk-in  { box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #fff, inset 2px 2px 0 #404040, inset -2px -2px 0 #dfdfdf; }
+
+/* Pencere başlık çubuğu — klasik mavi gradyan */
+.hk-title { background: linear-gradient(180deg,#3f8cf3 0%,#0a55c8 8%,#0b53c4 40%,#1c6ee4 88%,#2b7cf0 100%); }
+
+/* Buton (gri Win98) */
+.hk-btn { background: #d4d0c8; color: #000; padding: 3px 10px; font-size: 12px; border: 0; cursor: pointer;
+  box-shadow: inset -1px -1px 0 #0a0a0a, inset 1px 1px 0 #fff, inset -2px -2px 0 #808080, inset 2px 2px 0 #dfdfdf; }
+.hk-btn:active { box-shadow: inset 1px 1px 0 #0a0a0a, inset -1px -1px 0 #fff, inset 2px 2px 0 #808080, inset -2px -2px 0 #dfdfdf; }
+
+/* Liste zemini (beyaz) + satır vurgusu (klasik mavi) */
+.hk-list { background: #fff; }
+.hk-row:hover { background: #0a246a; color: #fff; }
+.hk-row:hover .hk-dim { color: #cfd8ff; }
+.hk-dim { color: #555; }
+
+/* Sol kategori menüsü (sarı-başlıklı klasik panel) */
+.hk-cat-head { background: linear-gradient(180deg,#ffe08a,#f2c94c); }
+
+/* Ahşap HAS OKEY logo bandı */
+.hk-logo-band {
+  background: repeating-linear-gradient(90deg, rgba(0,0,0,.22) 0 3px, transparent 3px 10px), linear-gradient(180deg,#6b4423,#3a2412);
+}
+.hk-logo-text {
+  font-family: Georgia, 'Times New Roman', serif; font-weight: 900; letter-spacing: 2px;
+  color: #f6e6c4; text-shadow: 0 2px 0 #2a1608, 0 0 12px rgba(255,220,150,.35);
+}
+.hk-lock { color: #b8860b; }
+
+/* Kat sekmesi / vurgu şeridi */
+.hk-tab { background: #d4d0c8; }
+.hk-tab-active { background: #fff; }
+
+/* ── "Oyun yükleniyor..." ilerleme çubuğu ─────────────────────── */
+@keyframes vkLoadBar { from { width: 4%; } to { width: 100%; } }
+.vk-loadbar { animation: vkLoadBar 1.15s ease-in-out forwards; }
+
+/* ── Klasik Win98 kaydırma çubukları ─────────────────────────── */
+* { scrollbar-width: auto; }
+::-webkit-scrollbar { width: 16px; height: 16px; }
+::-webkit-scrollbar-track {
+  background: repeating-conic-gradient(#dfdfdf 0% 25%, #ffffff 0% 50%) 50% / 2px 2px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d0c8;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-bottom: 1px solid #404040;
+  border-right: 1px solid #404040;
+  box-shadow: inset -1px -1px 0 #808080, inset 1px 1px 0 #dfdfdf;
+}
+::-webkit-scrollbar-button {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: #d4d0c8;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-bottom: 1px solid #404040;
+  border-right: 1px solid #404040;
+  box-shadow: inset -1px -1px 0 #808080, inset 1px 1px 0 #dfdfdf;
+}
+
+/* ── Klasisik arayüz metinleri her yerde net ─────────────────── */
+input, button, textarea, select { font-family: inherit; }
+
+/* ── Klavye odağı: klasik kesikli çerçeve ────────────────────── */
+:focus-visible { outline: 1px dotted #1a1a1a; outline-offset: -4px; }
+.felt-bg :focus-visible, .bg-wood-950 :focus-visible { outline-color: #d4a53c; }
+
+/* ── Klasik masa desenleri (referans: düz periwinkle mavi #5e74ad + kiremit ahşap #8b5a4a) ── */
+.klasik-masa {
+  background:
+    radial-gradient(120% 90% at 50% -10%, rgba(255, 255, 255, .06), rgba(255, 255, 255, 0) 55%),
+    radial-gradient(140% 120% at 50% 115%, rgba(0, 0, 0, .12), rgba(0, 0, 0, 0) 62%),
+    #5e74ad;
+}
+.klasik-ahsap {
+  background:
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, .08) 0 2px, rgba(255, 255, 255, .05) 2px 5px, rgba(0, 0, 0, .04) 5px 10px),
+    linear-gradient(180deg, #a5714f 0%, #8b5a4a 45%, #6d4436 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .20), inset 0 -2px 3px rgba(0, 0, 0, .25);
+}
+.klasik-oluk {
+  background: linear-gradient(180deg, #38240f, #241608);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, .8);
+  border-radius: 2px;
+}
+
+/* ── SOHBET ARKA PLANI — pembe duvar kağıdı, bulanık (boğuk) ──
+   Yazılar net okunsun diye resmin üstüne okunabilirlik perdesi konur.
+   Sınıflar: vk-chat-bg (temel) + resim (varsayılan ayicik | -bulut | -kalp)
+   + perde (varsayılan beyaz | -koyu). */
+.vk-chat-bg {
+  position: relative;
+  isolation: isolate;
+}
+.vk-chat-bg::before,
+.vk-chat-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.vk-chat-bg::before {
+  background-image: url("/chat-bg/ayicik.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px) saturate(1.05);
+  transform: scale(1.15); /* blur kenar boşluklarını kapatır */
+}
+.vk-chat-bg::after {
+  background: rgba(255, 255, 255, 0.62); /* okunabilirlik perdesi — açık/klasik tema */
+}
+.vk-chat-bg-bulut::before {
+  background-image: url("/chat-bg/bulut.jpg");
+}
+.vk-chat-bg-kalp::before {
+  background-image: url("/chat-bg/kalpler.jpg");
+}
+.vk-chat-bg-koyu::after {
+  background: rgba(22, 15, 10, 0.66); /* koyu tema perdesi (wood lobi) */
+}

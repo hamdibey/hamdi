@@ -1,0 +1,15 @@
+# Secrets — FTP credentials live here, never commit
+.env
+
+# Dependencies & build output
+node_modules/
+dist/
+
+# Editor / OS
+.DS_Store
+*.local
+.env.*
+!.env.example
+*.sqlite
+*.sqlite-*
+*.db
