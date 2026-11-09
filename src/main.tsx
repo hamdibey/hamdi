@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
+import "./classic-reference.css";
 import App from "./App.tsx";
 
 createRoot(document.getElementById("root")!).render(
@@ -23,39 +24,31 @@ if ("serviceWorker" in navigator) {
   const hadController = !!navigator.serviceWorker.controller;
 
   window.addEventListener("load", async () => {
-    // Yeni bir SW devreye girince (güncelleme alındı) sayfayı yenile — eski önbellek gösterilmesin
+    // Yeni bir SW devreye girince (update) sayfayı yenile — eski önbellek gösterilmesin
     navigator.serviceWorker.addEventListener("controllerchange", () => {
-      if (!hadController) return; // ilk kurulumda reload yapma
+      if (!hadController) return;
       window.location.reload();
     });
 
     try {
       const reg = await navigator.serviceWorker.register(swUrl, { updateViaCache: "none" });
-
-      // Açılışta hemen bir güncelleme kontrolü yap
       reg.update().catch(() => undefined);
 
-      // Yeni sürüm indirilmiş (waiting) ise devreye al — controllerchange reload'u tetikler
-      if (reg.waiting) {
-        reg.waiting.postMessage({ type: "SKIP_WAITING" });
-      }
+      if (reg.waiting) reg.waiting.postMessage({ type: "SKIP_WAITING" });
 
-      // Yeni sürüm indirildiğinde bilgilendir
       reg.addEventListener("updatefound", () => {
         const nw = reg.installing;
         if (!nw) return;
         nw.addEventListener("statechange", () => {
           if (nw.state === "installed" && navigator.serviceWorker.controller) {
-            // "installed + controller var" = yeni sürüm hazır, devreye al
             nw.postMessage({ type: "SKIP_WAITING" });
           }
         });
       });
 
-      // Uzun oturumlarda 60 sn'de bir güncelleme kontrolü
       window.setInterval(() => reg.update().catch(() => undefined), 60_000);
     } catch {
-      // SW kaydı başarısızsa uygulama yine de normal çalışır (ağdan)
+      // SW kaydı başarısızsa uygulama yine de normal çalışır.
     }
   });
 }

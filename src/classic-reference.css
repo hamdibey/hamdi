@@ -1,0 +1,52 @@
+/* Reference-matched classic lobby and Okey table visual overrides. */
+
+/* The Okey play surface in the reference uses a flat periwinkle blue felt. */
+.okey-mavi {
+  background-color: #5e74ad !important;
+}
+
+/* The game board row itself is blue too (the original JSX had a dark blue wrapper). */
+div:has(> .okey-mavi) {
+  background-color: #5e74ad !important;
+}
+
+/* Keep the wood rails/rack warm and distinct from the play surface. */
+.klasik-ahsap {
+  background-color: #8b5a4a;
+  border-color: #4a2e13;
+}
+
+/* Lobby/salon outside the table: classic blue desktop surround, not green felt. */
+div.felt-bg:has([class*="h-[560px]"]) {
+  background: #5e74ad !important;
+}
+
+/* Make the lobby/salon frame visibly raised like a classic desktop window. */
+div.felt-bg:has([class*="h-[560px]"]) [class*="max-w-[1500px]"] {
+  background-color: #d4d0c8 !important;
+  border-top-color: #fff !important;
+  border-left-color: #fff !important;
+  border-right-color: #404040 !important;
+  border-bottom-color: #404040 !important;
+  box-shadow: inset 1px 1px 0 #dfdfdf, inset -1px -1px 0 #808080, 2px 3px 0 #263b67 !important;
+}
+
+/* More obvious classic table header and alternating rows for quick visual checking. */
+div.felt-bg:has([class*="h-[560px]"]) table thead th {
+  background: linear-gradient(#fff, #cbd8eb) !important;
+  color: #102b59 !important;
+}
+
+div.felt-bg:has([class*="h-[560px]"]) table tbody tr:nth-child(even) {
+  background-color: #edf2fa !important;
+}
+
+div.felt-bg:has([class*="h-[560px]"]) table tbody tr:hover {
+  background-color: #c9dcf5 !important;
+}
+
+/* Consistent bright Win98 blue title bars in lobby and salon panels. */
+[class*="bg-gradient-to-b"][class*="from-[#3a6ea5]"] {
+  background: linear-gradient(180deg, #3f8cf3 0%, #0a55c8 55%, #0a246a 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35), inset 0 -1px 0 rgba(0,0,0,.35);
+}
