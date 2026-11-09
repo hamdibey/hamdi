@@ -14,15 +14,12 @@ body {
   font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
 
-button, input, textarea, select {
-  font-family: inherit;
-}
+button, input, textarea, select { font-family: inherit; }
 
 /* ---------- Win98/HasOkey klasik masaüstü arkaplanı ---------- */
 .felt-bg {
   background: linear-gradient(180deg, #dad6d1 0%, #d4d0c8 100%);
 }
-
 .wood-bg {
   background:
     repeating-linear-gradient(90deg, rgba(0,0,0,.18) 0 3px, transparent 3px 9px),
@@ -47,108 +44,83 @@ button, input, textarea, select {
   background: linear-gradient(160deg, #fdfaf1 0%, #f4eddc 55%, #e6dcc2 100%);
   box-shadow: 0 2px 4px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.8), inset 0 -2px 3px rgba(0,0,0,.08);
 }
-/* Taş rakamı — 3B kabartma: üstte beyaz ışık, altta koyu gölge → net okunur */
 .num-3d {
-  text-shadow:
-    0 1px 0 rgba(255,255,255,.85),
-    0 -1px 1px rgba(0,0,0,.35),
-    0 2px 3px rgba(0,0,0,.28);
+  text-shadow: 0 1px 0 rgba(255,255,255,.85), 0 -1px 1px rgba(0,0,0,.35), 0 2px 3px rgba(0,0,0,.28);
   paint-order: stroke fill;
   -webkit-text-stroke: 0.25px rgba(255,255,255,.35);
 }
 .tile-back {
-  background:
-    repeating-linear-gradient(45deg, rgba(255,255,255,.06) 0 3px, transparent 3px 6px),
-    linear-gradient(160deg, #7a4b34, #33211a);
+  background: repeating-linear-gradient(45deg, rgba(255,255,255,.06) 0 3px, transparent 3px 6px), linear-gradient(160deg, #7a4b34, #33211a);
   box-shadow: 0 2px 4px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.15);
 }
+.bone-face { background: linear-gradient(160deg, #fdfaf1 0%, #f0e8d4 100%); box-shadow: 0 2px 4px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.8); }
 
-/* ---------- Domino kemiği ---------- */
-.bone-face {
-  background: linear-gradient(160deg, #fdfaf1 0%, #f0e8d4 100%);
-  box-shadow: 0 2px 4px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.8);
-}
-
-/* ---------- Kaydırma çubuğu ---------- */
-*::-webkit-scrollbar { width: 8px; height: 8px; }
-*::-webkit-scrollbar-track { background: rgba(0,0,0,.25); }
-*::-webkit-scrollbar-thumb { background: #5f3d2c; border-radius: 8px; }
-*::-webkit-scrollbar-thumb:hover { background: #7a4b34; }
-
-/* ---------- Seçim ---------- */
+/* ---------- Win98 kaydırma çubukları ---------- */
+* { scrollbar-width: auto; }
+*::-webkit-scrollbar { width: 16px; height: 16px; }
+*::-webkit-scrollbar-track { background: repeating-conic-gradient(#dfdfdf 0% 25%, #fff 0% 50%) 50% / 2px 2px; }
+*::-webkit-scrollbar-thumb { background: #d4d0c8; border: 1px solid; border-color: #fff #404040 #404040 #fff; box-shadow: inset -1px -1px 0 #808080, inset 1px 1px 0 #dfdfdf; }
+*::-webkit-scrollbar-button { display: block; width: 16px; height: 16px; background: #d4d0c8; border: 1px solid; border-color: #fff #404040 #404040 #fff; box-shadow: inset -1px -1px 0 #808080, inset 1px 1px 0 #dfdfdf; }
 ::selection { background: #d4a53c; color: #170d08; }
 
-/* ---------- Mobil oyun: yatay çevirme ipucu ---------- */
-@keyframes rotatePhone {
-  0%, 20% { transform: rotate(0deg); }
-  60%, 100% { transform: rotate(90deg); }
-}
-.rotate-phone-anim {
-  font-size: 64px;
-  line-height: 1;
-  animation: rotatePhone 1.8s ease-in-out infinite;
-  transform-origin: 50% 50%;
-}
-
-/* ---------- Mobil oyun sahnesi ---------- */
+@keyframes rotatePhone { 0%, 20% { transform: rotate(0deg); } 60%, 100% { transform: rotate(90deg); } }
+.rotate-phone-anim { font-size: 64px; line-height: 1; animation: rotatePhone 1.8s ease-in-out infinite; transform-origin: 50% 50%; }
 .game-stage .cq-row { flex-direction: row; }
 .game-stage .cq-side-80 { width: 20rem; }
 .game-stage .cq-side-72 { width: 18rem; }
 
 /* ── Klasik masaüstü Win98 görünümü için temel panel ── */
-.vk-panel {
-  background: #d4d0c8;
-  border-top: 1px solid #ffffff;
-  border-left: 1px solid #ffffff;
-  border-right: 1px solid #404040;
-  border-bottom: 1px solid #404040;
-  box-shadow: inset -1px -1px 0 #0a0a0a, inset 1px 1px 0 #fff, inset -2px -2px 0 #808080, inset 2px 2px 0 #dfdfdf;
-}
+.vk-panel { background: #d4d0c8; border-top: 1px solid #fff; border-left: 1px solid #fff; border-right: 1px solid #404040; border-bottom: 1px solid #404040; box-shadow: inset -1px -1px 0 #0a0a0a, inset 1px 1px 0 #fff, inset -2px -2px 0 #808080, inset 2px 2px 0 #dfdfdf; }
 
-/* ── Klasik kayan duyuru bandı ── */
 @keyframes vkMarquee { from { transform: translateX(100%); } to { transform: translateX(-100%); } }
 .vk-marquee { display: inline-block; padding-left: 100%; animation: vkMarquee 30s linear infinite; }
+.klasik-masa { background: radial-gradient(120% 90% at 50% -10%, rgba(255,255,255,.06), transparent 55%), radial-gradient(140% 120% at 50% 115%, rgba(0,0,0,.12), transparent 62%), #5e74ad; }
+.klasik-ahsap { background: repeating-linear-gradient(90deg, rgba(0,0,0,.08) 0 2px, rgba(255,255,255,.05) 2px 5px, rgba(0,0,0,.04) 5px 10px), linear-gradient(180deg,#a5714f 0%,#8b5a4a 45%,#6d4436 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.2), inset 0 -2px 3px rgba(0,0,0,.25); }
+.klasik-oluk { background: linear-gradient(180deg,#38240f,#241608); box-shadow: inset 0 2px 5px rgba(0,0,0,.8); border-radius: 2px; }
 
-/* ── Klasik masa desenleri ── */
-.klasik-masa {
-  background:
-    radial-gradient(120% 90% at 50% -10%, rgba(255, 255, 255, .06), rgba(255, 255, 255, 0) 55%),
-    radial-gradient(140% 120% at 50% 115%, rgba(0, 0, 0, .12), rgba(0, 0, 0, 0) 62%),
-    #5e74ad;
-}
-.klasik-ahsap {
-  background:
-    repeating-linear-gradient(90deg, rgba(0, 0, 0, .08) 0 2px, rgba(255, 255, 255, .05) 2px 5px, rgba(0, 0, 0, .04) 5px 10px),
-    linear-gradient(180deg, #a5714f 0%, #8b5a4a 45%, #6d4436 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .20), inset 0 -2px 3px rgba(0, 0, 0, .25);
-}
-.klasik-oluk {
-  background: linear-gradient(180deg, #38240f, #241608);
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, .8);
-  border-radius: 2px;
-}
+.vk-chat-bg { position: relative; isolation: isolate; }
+.vk-chat-bg::before, .vk-chat-bg::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.vk-chat-bg::before { background: rgba(255,255,255,.72); }
+.vk-chat-bg::after { background: rgba(255,255,255,.18); }
 
-/* ── Sohbet arkaplanı temiz, klasik ve okunaklı ── */
-.vk-chat-bg {
-  position: relative;
-  isolation: isolate;
+/* ── Lobi + salon: görünür, kompakt HasOkey klasik tema ─────────────
+   Bu sayfalarda içerik Win98 panelinin içine sabit 1220px sahne olarak
+   yerleşir. Temayı hedefliyoruz; oyun ve genel site sayfaları etkilenmez. */
+div[class*="text-[11px]"][class*="select-none"][class*="overflow-hidden"]:has([class*="h-[560px]"]) {
+  background: linear-gradient(180deg, #6682b7 0%, #405b91 100%) !important;
 }
-.vk-chat-bg::before,
-.vk-chat-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
+div.felt-bg:has([class*="h-[560px]"]) {
+  background: linear-gradient(180deg, #6682b7 0%, #405b91 100%) !important;
 }
-.vk-chat-bg::before {
-  background: rgba(255,255,255,.72);
+div.felt-bg:has([class*="h-[560px]"]) [class*="max-w-[1500px]"] {
+  background: #dedbd4 !important;
+  border-color: #f8f7f3 #343434 #343434 #f8f7f3 !important;
+  box-shadow: 2px 3px 0 #1d2b49, 5px 7px 16px rgba(0,0,0,.38) !important;
 }
-.vk-chat-bg::after {
-  background: rgba(255,255,255,.18);
+/* Salon başlığı/kat şeridi: belirgin mavi Win98 başlık ve beyaz gezinme şeridi */
+div.felt-bg:has([class*="h-[560px]"]) [class*="text-2xl"][class*="leading-none"] {
+  text-shadow: 0 1px 0 #fff;
 }
-
-/* ── Klasik masaüstü başlığın altındaki boşluk ve görünüm ── */
+div.felt-bg:has([class*="h-[560px]"]) [class*="h-[560px]"] table thead th {
+  background: linear-gradient(180deg, #fff 0%, #d9e3f2 100%) !important;
+  color: #102b59 !important;
+  border-color: #aab8ca !important;
+}
+/* Masa listesinde daha okunaklı satır çizgileri ve mavi seçili satır */
+div.felt-bg:has([class*="h-[560px]"]) [class*="h-[560px]"] table tbody tr:nth-child(even) {
+  background-color: #eef3fa;
+}
+div.felt-bg:has([class*="h-[560px]"]) [class*="h-[560px]"] table tbody tr:hover {
+  background-color: #c9dcf5 !important;
+}
+div.felt-bg:has([class*="h-[560px]"]) [class*="h-[560px]"] aside > div > div:first-child {
+  background: linear-gradient(180deg, #3f8cf3 0%, #0a55c8 55%, #0a246a 100%);
+  color: #fff;
+}
+/* Win98 mavi başlık çubuklarını tek, tutarlı palete getir */
 [class*="bg-gradient-to-b"][class*="from-[#3a6ea5]"] {
-  box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+  background: linear-gradient(180deg, #3f8cf3 0%, #0a55c8 55%, #0a246a 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.25), inset 0 -1px 0 rgba(0,0,0,.3);
 }
+:focus-visible { outline: 1px dotted #1a1a1a; outline-offset: -4px; }
+.felt-bg :focus-visible, .bg-wood-950 :focus-visible { outline-color: #d4a53c; }
