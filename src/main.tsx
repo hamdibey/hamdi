@@ -20,11 +20,9 @@ createRoot(document.getElementById("root")!).render(
 if ("serviceWorker" in navigator) {
   const swUrl = `${import.meta.env.BASE_URL}sw.js`;
 
-  // Sayfa açılırken bir SW zaten kontrolde mi? (ilk ziyarette false → gereksiz reload olmasın)
   const hadController = !!navigator.serviceWorker.controller;
 
   window.addEventListener("load", async () => {
-    // Yeni bir SW devreye girince (update) sayfayı yenile — eski önbellek gösterilmesin
     navigator.serviceWorker.addEventListener("controllerchange", () => {
       if (!hadController) return;
       window.location.reload();
