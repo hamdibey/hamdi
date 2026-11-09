@@ -32,19 +32,27 @@
   box-shadow: inset 1px 1px 0 rgba(255,255,255,.35), inset -1px -1px 0 rgba(0,0,0,.35), 0 12px 28px rgba(0,0,0,.2) !important;
 }
 
-.okey-reference-main > div:first-child {
-  background: linear-gradient(180deg, #090d18 0%, #0e1423 100%) !important;
-  border-bottom-color: #8a5b2d !important;
+.okey-reference-shell {
+  gap: 0 !important;
+}
+
+.okey-reference-board {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  background: linear-gradient(180deg, #6a82c1 0%, #5c73af 100%) !important;
+  border-width: 4px !important;
 }
 
 .okey-reference-right {
-  width: 140px !important;
+  width: 150px !important;
+  flex: 0 0 150px !important;
   background: linear-gradient(180deg, #6d86c8 0%, #4f6bb0 100%) !important;
   border-left: 2px solid #183d9a !important;
 }
 
 .okey-reference-rail {
   width: 34px !important;
+  flex: 0 0 34px !important;
   background: linear-gradient(180deg, #9b674d 0%, #6e422d 100%) !important;
   border-color: #4b2d1c !important;
 }
@@ -58,7 +66,7 @@
 }
 
 .okey-reference-bottom {
-  min-height: 130px !important;
+  min-height: 126px !important;
 }
 
 .okey-reference-bottom > div:first-child,
@@ -72,12 +80,12 @@
 }
 
 .okey-reference [class*="bg-black"] {
-  background: linear-gradient(180deg, #080d1a 0%, #0d1528 100%) !important;
+  background: linear-gradient(180deg, #090d18 0%, #0e1423 100%) !important;
 }
 
 .okey-reference .klasik-ahsap {
   background:
-    repeating-linear-gradient(90deg, rgba(0, 0, 0, .08) 0 2px, rgba(255,255,255,.06) 2px 5px, rgba(0,0,0,.04) 5px 10px),
+    repeating-linear-gradient(90deg, rgba(0,0,0,.08) 0 2px, rgba(255,255,255,.06) 2px 5px, rgba(0,0,0,.04) 5px 10px),
     linear-gradient(180deg, #a5714f 0%, #8b5a4a 45%, #6d4436 100%) !important;
   border-color: #4a2e13 !important;
   box-shadow: inset 0 1px 0 rgba(255,255,255,.2), inset 0 -2px 3px rgba(0,0,0,.25);
@@ -97,8 +105,12 @@ div.felt-bg:has([class*="h-[560px]"]) [class*="max-w-[1500px]"] {
   box-shadow: inset 1px 1px 0 rgba(255,255,255,.34), inset -1px -1px 0 rgba(0,0,0,.35), 2px 4px 10px rgba(0,0,0,.3) !important;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   .okey-reference-right {
-    width: 118px !important;
+    width: 130px !important;
+    flex-basis: 130px !important;
+  }
+  .okey-reference-main {
+    min-height: 680px !important;
   }
 }
